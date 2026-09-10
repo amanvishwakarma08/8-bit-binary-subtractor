@@ -41,30 +41,8 @@ Synthesized logic diagram showing the hardware implementation generated from the
 ├── subtractor_8bit.v        # Subtractor RTL module
 ├── tb_subtractor_8bit.v     # Testbench file
 └── README.md
+
 ```
-
----
-
-## How to Run Simulation
-
-You can simulate this design using **Icarus Verilog** and **GTKWave**:
-
-1. **Compile**:
-   ```bash
-   iverilog -o subtractor_sim subtractor_8bit.v tb_subtractor_8bit.v
-   ```
-
-2. **Run**:
-   ```bash
-   vvp subtractor_sim
-   ```
-
-3. **View Waveform** (if using a VCD dump file):
-   ```bash
-   gtkwave subtractor_wave.vcd
-   ```
-
----
 
 ## Test Cases Covered
 * **`A > B`**: Normal subtraction with no borrow (`BORROW = 0`).
