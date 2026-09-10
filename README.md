@@ -5,14 +5,10 @@ This project implements an 8-bit subtractor module and its verification testbenc
 
 ---
 
-## How It Works
-The subtractor uses zero-extension via concatenation to handle subtraction and underflow in a single operation:
-
-```verilog
-assign result = {1'b0, A} - {1'b0, B};
-assign DIFF   = result[7:0];
-assign BORROW = result[8];
-```
+## Simulation
+The design and testbench were simulated and verified using [EDA Playground](https://www.edaplayground.com/):
+* **Simulator**: Icarus Verilog 0.10.0 (or your chosen tool)
+* **Waveform Viewer**: EPWave
 
 * **Inputs**:
   * `A [7:0]`: Minuend (8-bit unsigned integer)
